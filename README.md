@@ -27,34 +27,14 @@ The general form of the DSBSC signal is:
 6.	Plot the Signals: Use Matplotlib to plot the message signal, carrier signal, and modulated signal.
 
 ## Program
-```
-import numpy as np
-  import matplotlib.pyplot as plt
-  Am=4.3
-  fm=466
-  fs=46600
-  Ac=8.6
-  fc=4660
-  t=np.arange(0,2/fm,1/fs)
-  m=Am*np.cos(2*np.pi*fm*t)
-  plt.subplot(3,1,1)
-  plt.plot(t,m)
-  c=Ac*np.cos(2*np.pi*fc*t)
-  plt.subplot(3,1,2)
-  plt.plot(t,c)
-  s1=(Ac+m)*np.cos(2*np.pi*fc*t)
-  s2=(Ac-m)*np.cos(2*np.pi*fc*t)
-  s=s1-s2
-  plt.subplot(3,1,3)
-  plt.plot(t,s)
-  plt.tight_layout()
-  plt.show()
-```
+
+<img width="367" height="535" alt="Screenshot 2025-10-23 201031" src="https://github.com/user-attachments/assets/432a6be8-4439-4bdf-a6dd-d30a6dd0598d" />
+
 ## Output Waveform
-<img width="940" height="700" alt="image" src="https://github.com/user-attachments/assets/b6c024d3-30e7-42d4-ba49-e4419adaf790" />
+
+<img width="750" height="574" alt="Screenshot 2025-10-23 201041" src="https://github.com/user-attachments/assets/335c1c34-80c2-446d-8640-f91a766ed633" />
 
 ## Tabular Column
-<img width="940" height="1321" alt="image" src="https://github.com/user-attachments/assets/881e0595-6dae-4382-892f-28675a8544a1" />
 
 ## Result
 Thus the DSB-SC-AM Modulation and Demodulation using Python code is generated.
