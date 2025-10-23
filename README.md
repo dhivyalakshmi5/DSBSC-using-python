@@ -1,7 +1,7 @@
 # DSBSC-using-python
 
 ## Aim
-To implement and analyze DSBSC modulation (FM) using Python's NumPy and Matplotlib libraries. 
+To implement and analyze DSBSC modulation using Python's NumPy and Matplotlib libraries. 
 
 ## Apparatus Required
 
