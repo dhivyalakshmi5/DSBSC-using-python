@@ -27,12 +27,32 @@ The general form of the DSBSC signal is:
 6.	Plot the Signals: Use Matplotlib to plot the message signal, carrier signal, and modulated signal.
 
 ## Program
-
-<img width="367" height="535" alt="Screenshot 2025-10-23 201031" src="https://github.com/user-attachments/assets/432a6be8-4439-4bdf-a6dd-d30a6dd0598d" />
-
+```
+import numpy as np
+import matplotlib.pyplot as plt
+Am=3.3
+fm=293
+fs=29300
+Ac=10.8
+fc=2930
+t=np.arange(0,2/fm,1/fs)
+m=Am*np.cos(2*np.pi*fm*t)
+plt.subplot(3,1,1)
+plt.plot(t,m)
+c=Ac*np.cos(2*np.pi*fc*t)
+plt.subplot(3,1,2)
+plt.plot(t,c)
+s1=(Ac+m)*np.cos(2*np.pi*fc*t)
+s2=(Ac-m)*np.cos(2*np.pi*fc*t)
+s=s1-s2
+plt.subplot(3,1,3)
+plt.plot(t,s)
+plt.tight_layout()
+plt.show()
+```
 ## Output Waveform
 
-<img width="750" height="574" alt="Screenshot 2025-10-23 201041" src="https://github.com/user-attachments/assets/335c1c34-80c2-446d-8640-f91a766ed633" />
+<img width="856" height="599" alt="Screenshot 2025-10-28 174135" src="https://github.com/user-attachments/assets/73382e55-82fc-4db1-85ad-0bfb00ec0dfa" />
 
 ## Tabular Column
 
